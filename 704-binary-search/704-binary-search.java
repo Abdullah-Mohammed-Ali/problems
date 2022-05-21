@@ -6,12 +6,13 @@ class Solution {
     }
  public int binarySearch (int[] nums , int first , int last,int target)
     {
-        if(first <= last){
+     
+        while(first <= last){
             int mid = (first + last) / 2;
             System.out.println(mid);
             if(nums[mid] == target) return mid ;
-            if (nums[mid] < target) return  binarySearch(nums , mid+1,last,target);
-            if (nums[mid] > target) return  binarySearch(nums , first,mid - 1,target);
+            if (nums[mid] < target) first = mid+1;
+            if (nums[mid] > target)   last = mid-1;
         }
         return -1 ;
 
