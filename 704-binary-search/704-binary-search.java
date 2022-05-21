@@ -4,7 +4,6 @@ class Solution {
         int last = nums.length -1;
          while(first <= last){
             int mid = (first + last) / 2;
-            System.out.println(mid);
             if(nums[mid] == target) return mid ;
             if (nums[mid] < target) first = mid+1;
             if (nums[mid] > target)   last = mid-1;
