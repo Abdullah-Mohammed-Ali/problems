@@ -11,7 +11,6 @@ class Solution {
             if(nums[mid] < target) first = mid + 1;
          }
         if(target > nums[mid]) return mid + 1 ;
-         if(target < nums[mid]) return mid ;
-        return -1 ;
+        return mid ;
     }
 }
